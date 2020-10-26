@@ -52,6 +52,7 @@ check:app:
       - /feature\/.*/
       - /hotfix\/.*/
       - /test\/.*/
+      - /research\/.*/
 
 check:core:
   stage: check
@@ -64,6 +65,7 @@ check:core:
       - /feature\/.*/
       - /hotfix\/.*/
       - /test\/.*/
+      - /research\/.*/
 
 check:controlClient:
   stage: check
@@ -76,6 +78,7 @@ check:controlClient:
       - /feature\/.*/
       - /hotfix\/.*/
       - /test\/.*/
+      - /research\/.*/
 
 check:openRMBTBuild:
   stage: check
@@ -89,6 +92,7 @@ check:openRMBTBuild:
       - /feature\/.*/
       - /hotfix\/.*/
       - /test\/.*/
+      - /research\/.*/
 
 .check:uiTests:
   stage: check
