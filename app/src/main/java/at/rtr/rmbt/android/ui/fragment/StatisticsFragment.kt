@@ -54,8 +54,11 @@ class StatisticsFragment : BaseFragment() {
 
     private class MyWebViewClient(private val statisticsViewModel: StatisticsViewModel) : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-            view?.loadUrl(url)
-            return true
+            url?.let {
+                view?.loadUrl(url)
+                return true
+            }
+            return false
         }
         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
             super.onPageStarted(view, url, favicon)

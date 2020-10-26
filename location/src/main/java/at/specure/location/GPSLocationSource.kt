@@ -28,15 +28,15 @@ class GPSLocationSource(context: Context) : LocationSource {
 
     private val locationListener = object : LocationListener {
 
-        override fun onLocationChanged(location: Location?) {
-            listener?.onLocationChanged(location?.let { LocationInfo(it) })
+        override fun onLocationChanged(location: Location) {
+            listener?.onLocationChanged(LocationInfo(location))
         }
 
         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
 
-        override fun onProviderEnabled(provider: String?) {}
+        override fun onProviderEnabled(provider: String) {}
 
-        override fun onProviderDisabled(provider: String?) {}
+        override fun onProviderDisabled(provider: String) {}
     }
 
     @SuppressLint("MissingPermission")

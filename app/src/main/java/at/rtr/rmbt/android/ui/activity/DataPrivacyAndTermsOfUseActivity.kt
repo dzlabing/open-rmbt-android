@@ -62,7 +62,9 @@ class DataPrivacyAndTermsOfUseActivity : BaseActivity() {
                     }
                     false
                 })
-                loadDataWithBaseURL(null, tacContent, "text/html", "utf-8", null)
+                tacContent?.let {
+                    loadDataWithBaseURL(null, it, "text/html", "utf-8", null)
+                }
             }
         }
 
@@ -82,8 +84,11 @@ class DataPrivacyAndTermsOfUseActivity : BaseActivity() {
 
     inner class MyWebViewClient : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-            view?.loadUrl(url)
-            return true
+            url?.let {
+                view?.loadUrl(it)
+                return true
+            }
+            return false
         }
 
         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
