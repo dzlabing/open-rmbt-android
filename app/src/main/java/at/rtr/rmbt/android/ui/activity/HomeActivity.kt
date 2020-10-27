@@ -14,13 +14,11 @@
 
 package at.rtr.rmbt.android.ui.activity
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.plusAssign
 import androidx.navigation.ui.setupWithNavController
 import at.rtr.rmbt.android.R
 import at.rtr.rmbt.android.databinding.ActivityHomeBinding
@@ -49,7 +47,6 @@ class HomeActivity : BaseActivity() {
         }
     }
 
-    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = bindContentView(R.layout.activity_home)
@@ -59,7 +56,7 @@ class HomeActivity : BaseActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController = navHostFragment.navController
         val navigator = KeepStateNavigator(this, navHostFragment.childFragmentManager, R.id.navHostFragment)
-        navController.navigatorProvider += navigator
+        navController.navigatorProvider.addNavigator(navigator)
         navController.setGraph(R.navigation.mobile_navigation)
 
         binding.navView.setupWithNavController(navController)
