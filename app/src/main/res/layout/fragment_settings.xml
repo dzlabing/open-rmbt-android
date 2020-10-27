@@ -121,8 +121,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchLoopModeEnabled"
-                bind:title="@{@string/preferences_loop_mode_min_delay}"
-                bind:value="@{String.valueOf(state.loopModeWaitingTimeMin)}" />
+                bind:titleET="@{@string/preferences_loop_mode_min_delay}"
+                bind:valueET="@{String.valueOf(state.loopModeWaitingTimeMin)}" />
 
             <include
                 android:id="@+id/loopModeDistanceMeters"
@@ -133,8 +133,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/loopModeWaitingTime"
-                bind:title="@{@string/preferences_loop_mode_max_movement}"
-                bind:value="@{String.valueOf(state.loopModeDistanceMeters)}" />
+                bind:titleET="@{@string/preferences_loop_mode_max_movement}"
+                bind:valueET="@{String.valueOf(state.loopModeDistanceMeters)}" />
 
             <include
                 android:id="@+id/switchExpertModeEnabled"
@@ -183,8 +183,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioInfo"
-                bind:title="@{@string/preferences_server_selection}"
-                bind:value='@{state.selectedMeasurementServer  != null ? state.selectedMeasurementServer.name : @string/preferences_default_server_selection}' />
+                bind:titleET="@{@string/preferences_server_selection}"
+                bind:valueET='@{state.selectedMeasurementServer  != null ? state.selectedMeasurementServer.name : @string/preferences_default_server_selection}' />
 
             <include
                 android:id="@+id/labelDeveloperControlServer"
@@ -219,8 +219,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchDeveloperControlServerOverride"
-                bind:title="@{@string/preferences_override_control_server_host}"
-                bind:value="@{state.controlServerHost}" />
+                bind:titleET="@{@string/preferences_override_control_server_host}"
+                bind:valueET="@{state.controlServerHost}" />
 
             <include
                 android:id="@+id/developerControlServerPort"
@@ -231,8 +231,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developerControlServerHost"
-                bind:title="@{@string/preferences_override_control_server_port}"
-                bind:value="@{String.valueOf(state.controlServerPort)}" />
+                bind:titleET="@{@string/preferences_override_control_server_port}"
+                bind:valueET="@{String.valueOf(state.controlServerPort)}" />
 
             <include
                 android:id="@+id/switchDeveloperControlServerSSL"
@@ -280,8 +280,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchDeveloperMapServerOverride"
-                bind:title="@{@string/preferences_developer_map_host}"
-                bind:value="@{state.mapServerHost}" />
+                bind:titleET="@{@string/preferences_developer_map_host}"
+                bind:valueET="@{state.mapServerHost}" />
 
             <include
                 android:id="@+id/developerMapServerPort"
@@ -292,8 +292,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developerMapServerHost"
-                bind:title="@{@string/preferences_developer_map_port}"
-                bind:value="@{String.valueOf(state.mapServerPort)}" />
+                bind:titleET="@{@string/preferences_developer_map_port}"
+                bind:valueET="@{String.valueOf(state.mapServerPort)}" />
 
             <include
                 android:id="@+id/labelDeveloperSimulate5G"
@@ -365,8 +365,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchQosServerOverride"
-                bind:title="@{@string/preferences_tag}"
-                bind:value="@{state.developerModeTag}" />
+                bind:titleET="@{@string/preferences_tag}"
+                bind:valueET="@{state.developerModeTag}" />
 
             <include
                 android:id="@+id/labelContact"
