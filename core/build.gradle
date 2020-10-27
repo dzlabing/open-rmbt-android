@@ -19,8 +19,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField 'int', 'VERSION_CODE', "${project.config.versionCode}"
-        buildConfigField 'String', 'VERSION_NAME', "\"${project.config.versionName}\""
         buildConfigField "String", "GIT_VERSION_NAME", "\"${gitVersionName()}\""
         buildConfigField "String", "GIT_BRANCH_NAME", "\"${gitBranchName()}\""
         buildConfigField "String", "GIT_FULL_HASH", "\"${gitFullHash()}\""
