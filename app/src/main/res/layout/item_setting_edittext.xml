@@ -7,11 +7,11 @@
     <data>
 
         <variable
-            name="title"
+            name="titleET"
             type="String" />
 
         <variable
-            name="value"
+            name="valueET"
             type="String" />
 
     </data>
@@ -31,7 +31,7 @@
             android:layout_centerVertical="true"
             android:ellipsize="marquee"
             android:singleLine="true"
-            android:text="@{title}"
+            android:text="@{titleET}"
             android:textColor="@color/text_dark_gray"
             tools:text="Title" />
 
@@ -44,7 +44,7 @@
             android:layout_toEndOf="@android:id/title"
             android:maxLines="2"
             android:gravity="end"
-            android:text="@{value}"
+            android:text="@{valueET}"
             android:textColor="@color/colorAccent"
             tools:text="10" />
 

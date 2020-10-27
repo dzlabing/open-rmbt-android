@@ -7,11 +7,11 @@
     <data>
 
         <variable
-            name="title"
+            name="titleKV"
             type="String" />
 
         <variable
-            name="value"
+            name="valueKV"
             type="String" />
 
     </data>
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:singleLine="true"
-            android:text="@{title}"
+            android:text="@{titleKV}"
             android:gravity="start"
             android:textColor="@color/text_dark_gray"
             tools:text="Title" />
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:gravity="end"
-            android:text="@{value}"
+            android:text="@{valueKV}"
             android:textColor="@color/text_gray_transparency_60"
             tools:text="10" />
 

@@ -38,7 +38,7 @@ class LoopConfigurationActivity : BaseActivity(), InputSettingDialog.Callback {
         binding.loopModeWaitingTime.frameLayoutRoot.setOnClickListener {
             InputSettingDialog.instance(
                 getString(R.string.preferences_loop_mode_min_delay),
-                binding.loopModeWaitingTime.value.toString(),
+                binding.loopModeWaitingTime.valueET.toString(),
                 requestCode = CODE_WAITING_TIME
             ).show(this)
         }
@@ -46,7 +46,7 @@ class LoopConfigurationActivity : BaseActivity(), InputSettingDialog.Callback {
         binding.loopModeDistanceMeters.frameLayoutRoot.setOnClickListener {
             InputSettingDialog.instance(
                 getString(R.string.preferences_loop_mode_max_movement),
-                binding.loopModeDistanceMeters.value.toString(),
+                binding.loopModeDistanceMeters.valueET.toString(),
                 requestCode = CODE_DISTANCE
             )
                 .show(this)

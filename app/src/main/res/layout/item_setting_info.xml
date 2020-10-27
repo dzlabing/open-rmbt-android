@@ -7,11 +7,11 @@
     <data>
 
         <variable
-            name="title"
+            name="titleI"
             type="String" />
 
         <variable
-            name="summary"
+            name="summaryI"
             type="String" />
 
 
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:singleLine="true"
-            android:text="@{title}"
+            android:text="@{titleI}"
             android:textColor="@color/text_dark_gray"
             tools:text="Title" />
 
@@ -43,9 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="2"
-            android:text="@{summary}"
+            android:text="@{summaryI}"
             android:textColor="@color/text_gray_transparency_60"
-            app:visibleOrGone="@{summary != null}"
+            app:visibleOrGone="@{summaryI != null}"
             tools:text="Summary" />
 
 

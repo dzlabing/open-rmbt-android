@@ -34,7 +34,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                bind:title="@{@string/preferences_general_settings}" />
+                bind:titleH="@{@string/preferences_general_settings}" />
 
 
             <include
@@ -46,8 +46,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelGeneralSettings"
-                bind:title="@{@string/preferences_ndt}"
-                bind:value="@{state.isNDTEnabled}" />
+                bind:titleS="@{@string/preferences_ndt}"
+                bind:valueS="@{state.isNDTEnabled}" />
 
             <include
                 android:id="@+id/switchSkipQosTests"
@@ -58,8 +58,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchNDT"
-                bind:title="@{@string/preferences_qos_measurement}"
-                bind:value="@{state.qosMeasurement}" />
+                bind:titleS="@{@string/preferences_qos_measurement}"
+                bind:valueS="@{state.qosMeasurement}" />
 
             <include
                 android:id="@+id/switchSkipQosTestsForPeriodOnly"
@@ -70,9 +70,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchSkipQosTests"
-                bind:summary="@{@string/preferences_qos_measurement_only_after_some_time_summary}"
-                bind:title="@{@string/preferences_qos_measurement_only_after_some_time}"
-                bind:value="@{state.qosMeasurementSkipForPeriod}" />
+                bind:summaryS="@{@string/preferences_qos_measurement_only_after_some_time_summary}"
+                bind:titleS="@{@string/preferences_qos_measurement_only_after_some_time}"
+                bind:valueS="@{state.qosMeasurementSkipForPeriod}" />
 
             <include
                 android:id="@+id/switchLocations"
@@ -83,8 +83,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchSkipQosTestsForPeriodOnly"
-                bind:title="@{@string/preferences_location}"
-                bind:value="@{state.canManageLocationSettings}" />
+                bind:titleS="@{@string/preferences_location}"
+                bind:valueS="@{state.canManageLocationSettings}" />
 
 
             <include
@@ -95,7 +95,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchLocations"
-                bind:title="@{@string/preferences_advanced_settings}" />
+                bind:titleH="@{@string/preferences_advanced_settings}" />
 
 
             <include
@@ -107,9 +107,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelAdvancedSettings"
-                bind:summary="@{@string/preferences_loop_mode_summary}"
-                bind:title="@{@string/preferences_loop_mode}"
-                bind:value="@{state.loopModeEnabled}" />
+                bind:summaryS="@{@string/preferences_loop_mode_summary}"
+                bind:titleS="@{@string/preferences_loop_mode}"
+                bind:valueS="@{state.loopModeEnabled}" />
 
 
             <include
@@ -145,9 +145,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/loopModeDistanceMeters"
-                bind:summary="@{@string/preferences_expert_mode_summary}"
-                bind:title="@{@string/preferences_expert_mode}"
-                bind:value="@{state.expertModeEnabled}" />
+                bind:summaryS="@{@string/preferences_expert_mode_summary}"
+                bind:titleS="@{@string/preferences_expert_mode}"
+                bind:valueS="@{state.expertModeEnabled}" />
 
             <include
                 android:id="@+id/switchExpertModeIPV4Only"
@@ -158,9 +158,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchExpertModeEnabled"
-                bind:summary="@{@string/preferences_ipv4_only_sum}"
-                bind:title="@{@string/preferences_ipv4_only}"
-                bind:value="@{state.expertModeUseIpV4Only}" />
+                bind:summaryS="@{@string/preferences_ipv4_only_sum}"
+                bind:titleS="@{@string/preferences_ipv4_only}"
+                bind:valueS="@{state.expertModeUseIpV4Only}" />
 
             <include
                 android:id="@+id/radioInfo"
@@ -171,8 +171,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchExpertModeIPV4Only"
-                bind:summary="@{@string/preferences_radio_info_sum}"
-                bind:title="@{@string/preferences_radio_info}" />
+                bind:summaryI="@{@string/preferences_radio_info_sum}"
+                bind:titleI="@{@string/preferences_radio_info}" />
 
             <include
                 android:id="@+id/userServerSelection"
@@ -195,7 +195,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userServerSelection"
-                bind:title="@{@string/preferences_developer_control_server}" />
+                bind:titleH="@{@string/preferences_developer_control_server}" />
 
             <include
                 android:id="@+id/switchDeveloperControlServerOverride"
@@ -206,9 +206,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelDeveloperControlServer"
-                bind:summary="@{@string/preferences_override_control_server_sum}"
-                bind:title="@{@string/preferences_override_control_server}"
-                bind:value="@{state.controlServerOverrideEnabled}" />
+                bind:summaryS="@{@string/preferences_override_control_server_sum}"
+                bind:titleS="@{@string/preferences_override_control_server}"
+                bind:valueS="@{state.controlServerOverrideEnabled}" />
 
             <include
                 android:id="@+id/developerControlServerHost"
@@ -243,9 +243,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developerControlServerPort"
-                bind:summary="@{@string/preferences_override_control_server_ssl_sum}"
-                bind:title="@{@string/preferences_override_control_server_ssl}"
-                bind:value="@{state.controlServerUseSSL}" />
+                bind:summaryS="@{@string/preferences_override_control_server_ssl_sum}"
+                bind:titleS="@{@string/preferences_override_control_server_ssl}"
+                bind:valueS="@{state.controlServerUseSSL}" />
 
             <include
                 android:id="@+id/labelDeveloperMapServer"
@@ -256,7 +256,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchDeveloperControlServerSSL"
-                bind:title="@{@string/preferences_developer_map_server}" />
+                bind:titleH="@{@string/preferences_developer_map_server}" />
 
             <include
                 android:id="@+id/switchDeveloperMapServerOverride"
@@ -267,9 +267,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelDeveloperMapServer"
-                bind:summary="@{@string/preferences_developer_map_override_sum}"
-                bind:title="@{@string/preferences_developer_map_override}"
-                bind:value="@{state.mapServerOverrideEnabled}" />
+                bind:summaryS="@{@string/preferences_developer_map_override_sum}"
+                bind:titleS="@{@string/preferences_developer_map_override}"
+                bind:valueS="@{state.mapServerOverrideEnabled}" />
 
             <include
                 android:id="@+id/developerMapServerHost"
@@ -304,7 +304,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developerMapServerPort"
-                bind:title="@{@string/preferences_5g_simulation_title}" />
+                bind:titleH="@{@string/preferences_5g_simulation_title}" />
 
             <include
                 android:id="@+id/switchDeveloper5GSimulation"
@@ -315,9 +315,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelDeveloperSimulate5G"
-                bind:summary="@{@string/preferences_5g_simulation_sum}"
-                bind:title="@{@string/preferences_5g_simulation}"
-                bind:value="@{state.developer5GSimulationEnabled}" />
+                bind:summaryS="@{@string/preferences_5g_simulation_sum}"
+                bind:titleS="@{@string/preferences_5g_simulation}"
+                bind:valueS="@{state.developer5GSimulationEnabled}" />
 
             <include
                 android:id="@+id/switchDeveloperMapServerSSL"
@@ -328,9 +328,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchDeveloper5GSimulation"
-                bind:summary="@{@string/preferences_developer_map_ssl_sum}"
-                bind:title="@{@string/preferences_developer_map_ssl}"
-                bind:value="@{state.mapServerUseSSL}" />
+                bind:summaryS="@{@string/preferences_developer_map_ssl_sum}"
+                bind:titleS="@{@string/preferences_developer_map_ssl}"
+                bind:valueS="@{state.mapServerUseSSL}" />
 
             <include
                 android:id="@+id/labelQosServer"
@@ -341,7 +341,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switchDeveloperMapServerSSL"
-                bind:title="@{@string/preferences_category_developer_qos_server}" />
+                bind:titleH="@{@string/preferences_category_developer_qos_server}" />
 
             <include
                 android:id="@+id/switchQosServerOverride"
@@ -352,9 +352,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelQosServer"
-                bind:summary="@{@string/preferences_developer_qos_ssl_sum}"
-                bind:title="@{@string/preferences_developer_qos_ssl}"
-                bind:value="@{state.qosSSL}" />
+                bind:summaryS="@{@string/preferences_developer_qos_ssl_sum}"
+                bind:titleS="@{@string/preferences_developer_qos_ssl}"
+                bind:valueS="@{state.qosSSL}" />
 
             <include
                 android:id="@+id/developerTag"
@@ -376,7 +376,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developerTag"
-                bind:title="@{@string/preferences_contact}" />
+                bind:titleH="@{@string/preferences_contact}" />
 
             <include
                 android:id="@+id/goToWebsite"
@@ -386,7 +386,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelContact"
-                bind:title="@{@string/preferences_go_to_website}" />
+                bind:titleMD="@{@string/preferences_go_to_website}" />
 
             <include
                 android:id="@+id/contactUs"
@@ -396,7 +396,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/goToWebsite"
-                bind:title="@{@string/preferences_contact_us}" />
+                bind:titleMD="@{@string/preferences_contact_us}" />
 
             <include
                 android:id="@+id/labelAdditionalInformation"
@@ -406,7 +406,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/contactUs"
-                bind:title="@{@string/preferences_additional_Information}" />
+                bind:titleH="@{@string/preferences_additional_Information}" />
 
             <include
                 android:id="@+id/clientUUID"
@@ -416,8 +416,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelAdditionalInformation"
-                bind:title="@{@string/preferences_client_uuid}"
-                bind:value="@{state.clientUUIDFormatted}" />
+                bind:titleKV="@{@string/preferences_client_uuid}"
+                bind:valueKV="@{state.clientUUIDFormatted}" />
 
             <include
                 android:id="@+id/numberOfTestsPerformed"
@@ -427,8 +427,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/clientUUID"
-                bind:title="@{@string/preferences_test_cases}"
-                bind:value="@{String.valueOf(state.numberOfTests)}" />
+                bind:titleKV="@{@string/preferences_test_cases}"
+                bind:valueKV="@{String.valueOf(state.numberOfTests)}" />
 
             <include
                 android:id="@+id/labelAbout"
@@ -438,7 +438,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/numberOfTestsPerformed"
-                bind:title="@{@string/preferences_about}" />
+                bind:titleH="@{@string/preferences_about}" />
 
             <include
                 android:id="@+id/sourceCode"
@@ -448,7 +448,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelAbout"
-                bind:title="@{@string/preferences_source_code}" />
+                bind:titleMD="@{@string/preferences_source_code}" />
 
             <include
                 android:id="@+id/dataPrivacyAndTerms"
@@ -458,7 +458,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sourceCode"
-                bind:title="@{@string/preferences_data_protection}" />
+                bind:titleMD="@{@string/preferences_data_protection}" />
 
             <include
                 android:id="@+id/developedBy"
@@ -468,7 +468,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dataPrivacyAndTerms"
-                bind:title="@{@string/preferences_developed_by}" />
+                bind:titleMD="@{@string/preferences_developed_by}" />
 
             <include
                 android:id="@+id/version"
@@ -478,7 +478,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developedBy"
-                bind:title="@{@string/preferences_version}" />
+                bind:titleKV="@{@string/preferences_version}" />
 
             <include
                 android:id="@+id/commitHash"
@@ -488,7 +488,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/version"
-                bind:title="@{@string/preferences_commit_hash}" />
+                bind:titleKV="@{@string/preferences_commit_hash}" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"

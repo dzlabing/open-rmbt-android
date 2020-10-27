@@ -47,7 +47,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_loop_mode_min_delay),
-                binding.loopModeWaitingTime.value.toString(), this,
+                binding.loopModeWaitingTime.valueET.toString(), this,
                 KEY_REQUEST_CODE_LOOP_MODE_WAITING_TIME
             )
                 .show(activity)
@@ -58,7 +58,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_loop_mode_max_movement),
-                binding.loopModeDistanceMeters.value.toString(), this,
+                binding.loopModeDistanceMeters.valueET.toString(), this,
                 KEY_REQUEST_CODE_LOOP_MODE_DISTANCE
             )
                 .show(activity)
@@ -76,15 +76,15 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
         }
 
         binding.clientUUID.frameLayoutRootKeyValue.setOnClickListener {
-            val clientUUIDExists = !binding.clientUUID.value.isNullOrEmpty()
+            val clientUUIDExists = !binding.clientUUID.valueKV.isNullOrEmpty()
             if (clientUUIDExists) {
-                context?.copyToClipboard(binding.clientUUID.value)
+                context?.copyToClipboard(binding.clientUUID.valueKV)
                 Toast.makeText(context, R.string.about_client_uuid_copied, Toast.LENGTH_SHORT).show()
             }
         }
 
         settingsViewModel.state.clientUUID.liveData.listen(this) {
-            binding.clientUUID.value = if (it.isNullOrEmpty()) "" else "U$it"
+            binding.clientUUID.valueKV = if (it.isNullOrEmpty()) "" else "U$it"
         }
 
         settingsViewModel.locationStateLiveData.listen(this) {
@@ -122,7 +122,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_override_control_server_host),
-                binding.developerControlServerHost.value.toString(), this,
+                binding.developerControlServerHost.valueET.toString(), this,
                 KEY_DEVELOPER_CONTROL_SERVER_HOST_CODE,
                 inputType = InputType.TYPE_CLASS_TEXT
             )
@@ -133,7 +133,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_override_control_server_port),
-                binding.developerControlServerPort.value.toString(), this,
+                binding.developerControlServerPort.valueET.toString(), this,
                 KEY_DEVELOPER_CONTROL_SERVER_PORT_CODE
             )
                 .show(activity)
@@ -143,7 +143,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_developer_map_host),
-                binding.developerMapServerHost.value.toString(), this,
+                binding.developerMapServerHost.valueET.toString(), this,
                 KEY_DEVELOPER_MAP_SERVER_HOST_CODE,
                 inputType = InputType.TYPE_CLASS_TEXT
             )
@@ -154,7 +154,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_developer_map_port),
-                binding.developerMapServerPort.value.toString(), this,
+                binding.developerMapServerPort.valueET.toString(), this,
                 KEY_DEVELOPER_MAP_SERVER_PORT_CODE
             )
                 .show(activity)
@@ -164,7 +164,7 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
 
             InputSettingDialog.instance(
                 getString(R.string.preferences_tag),
-                binding.developerTag.value?.toString() ?: "", this,
+                binding.developerTag.valueET?.toString() ?: "", this,
                 KEY_DEVELOPER_TAG_CODE,
                 inputType = InputType.TYPE_CLASS_TEXT,
                 isEmptyInputAllowed = true
@@ -172,8 +172,8 @@ class SettingsFragment : BaseFragment(), InputSettingDialog.Callback, ServerSele
                 .show(activity)
         }
 
-        binding.version.value = "${BuildConfig.VERSION_NAME} (${BuildConfig.BUILD_TIME})"
-        binding.commitHash.value = BuildConfig.COMMIT_HASH
+        binding.version.valueKV = "${BuildConfig.VERSION_NAME} (${BuildConfig.BUILD_TIME})"
+        binding.commitHash.valueKV = BuildConfig.COMMIT_HASH
         binding.sourceCode.root.setOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(settingsViewModel.state.githubRepositoryUrl.get())))
         }

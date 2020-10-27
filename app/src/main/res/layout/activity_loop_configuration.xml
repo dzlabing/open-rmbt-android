@@ -93,8 +93,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/count"
-                    app:title="@{@string/preferences_loop_mode_min_delay}"
-                    app:value="@{String.valueOf(state.waitingTime)}" />
+                    app:titleET="@{@string/preferences_loop_mode_min_delay}"
+                    app:valueET="@{String.valueOf(state.waitingTime)}" />
 
                 <include
                     android:id="@+id/loopModeDistanceMeters"
@@ -104,8 +104,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/loopModeWaitingTime"
-                    app:title="@{@string/preferences_loop_mode_max_movement}"
-                    app:value="@{String.valueOf(state.distance)}" />
+                    app:titleET="@{@string/preferences_loop_mode_max_movement}"
+                    app:valueET="@{String.valueOf(state.distance)}" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

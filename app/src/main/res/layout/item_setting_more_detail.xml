@@ -7,7 +7,7 @@
     <data>
 
         <variable
-            name="title"
+            name="titleMD"
             type="String" />
 
 
@@ -24,7 +24,7 @@
         android:minHeight="?android:attr/listPreferredItemHeight"
         android:padding="@dimen/padding_large"
         android:singleLine="true"
-        android:text="@{title}"
+        android:text="@{titleMD}"
         android:textColor="@color/text_dark_gray"
         tools:text="Title" />
 

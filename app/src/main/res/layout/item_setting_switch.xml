@@ -8,15 +8,15 @@
 
         <import type="androidx.databinding.ObservableField" />
         <variable
-            name="title"
+            name="titleS"
             type="String" />
 
         <variable
-            name="summary"
+            name="summaryS"
             type="String" />
 
         <variable
-            name="value"
+            name="valueS"
             type="ObservableField&lt;Boolean>"
             />
 
@@ -38,7 +38,7 @@
             android:layout_toStartOf="@+id/switchButton"
             android:ellipsize="marquee"
             android:singleLine="true"
-            android:text="@{title}"
+            android:text="@{titleS}"
             android:textColor="@color/text_dark_gray"
             tools:text="Title" />
 
@@ -50,8 +50,8 @@
             android:layout_below="@android:id/title"
             android:layout_toStartOf="@+id/switchButton"
             android:maxLines="2"
-            android:text="@{summary}"
-            app:visibleOrGone="@{summary != null}"
+            android:text="@{summaryS}"
+            app:visibleOrGone="@{summaryS != null}"
             tools:text="Summary" />
 
         <androidx.appcompat.widget.SwitchCompat
@@ -63,7 +63,7 @@
             android:layout_centerVertical="true"
             android:thumb="@drawable/thumb_selector"
             app:track="@drawable/track_selector"
-            android:checked="@={value}"/>
+            android:checked="@={valueS}" />
 
     </RelativeLayout>
 
